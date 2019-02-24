@@ -1,0 +1,65 @@
+
+<html>
+<body>
+<h1>Calorie deficit App</h1>
+
+
+	<form name="data" method="post" action=".">
+		<p>How many meals do you eat a day?<p>
+		<input type="search"  name="daily-meals"  placeholder="meals a day" id="search"/>
+		<br>
+		<input type="search"  name="user-age"  placeholder="age" id="search"/>
+		<br>
+		<input type="search"  name="user-weight"  placeholder="weight lb" id="search"/>
+		<br>
+		<input type="search" style="width: 91.5px;" name="user-ft"  placeholder="feet" id="search"/>
+		<input type="search" style="width: 91.5px;" name="user-in"  placeholder="inches" id="search"/>
+		
+		<br>
+		<input type="submit" value="submit">
+	</form>
+	<br>
+	<h2>Your information<h2>
+		
+	<table>
+		<tr>
+			<td class="title">meals a day<td>
+			<td class="title"> age <td>
+			<td class="title">weight(lb)<td>
+			<td class="title">height(feet'inches)<td>
+		</tr>
+		<tr>
+		<td>{{meals}}<td>
+		<td>{{age}}<td>
+		<td>{{weight}}<td>
+		<td>{{heightft}}'{{heightin}}<td>
+		</tr>
+	</table>
+	<h2>Daily goals</h2>
+	<table>
+	{%for x in tableset %}
+		{{x}}
+	{%endfor%}
+	</table>
+<style>
+.title{
+	font-weight: bold;
+	}
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 20%;
+}
+
+th, td {
+  padding: 15px;
+}
+<style>
+<script>
+</script>
+</body>
+</html>
